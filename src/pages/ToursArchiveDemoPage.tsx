@@ -86,7 +86,7 @@ const ToursArchiveDemoPage: React.FC = () => {
           </div>
 
           {/* Mobile Show Filters Button - Centered */}
-          <div className="md:hidden flex justify-center mb-4">
+          <div className="md:hidden mb-4">
             <MobileFiltersDemo filters={filters} />
           </div>
 

@@ -3,13 +3,13 @@ import RangeSlider from '@/components/archive/RangeSlider';
 import StarRating from '@/components/archive/StarRating';
 
 const Accordion: React.FC<{ title: string; children: React.ReactNode }>=({ title, children })=>{
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   return (
     <div className="border-b border-gray-200">
       <button
         type="button"
         className="w-full flex items-center justify-between py-3 text-left"
-        aria-expanded={open ? 'true' : 'false'}
+        aria-expanded={open}
         onClick={()=>setOpen(!open)}
       >
         <span className="font-semibold" style={{ color: 'var(--tu-navy)' }}>{title}</span>
@@ -49,7 +49,7 @@ const FiltersSidebarDemo: React.FC<{ filters: any }>=() =>{
   const availability = ["Available","Waitlist","Sold Out"];
 
   return (
-    <aside className="bg-white rounded-xl p-4 shadow-sm sticky top-24">
+    <aside className="bg-white rounded-xl p-4 shadow-sm sticky top-24 w-full lg:w-auto">
       {/* Selected filters chips (placeholders) */}
       <div className="flex items-center flex-wrap gap-2 mb-4">
         <span className="px-3 py-1 rounded-full bg-gray-100 border text-sm">Luxury ×</span>
