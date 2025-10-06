@@ -169,7 +169,7 @@ const Header: React.FC = () => {
                       </Link>
                     ))}
                     <Link
-                      to="/tours"
+                      to="/tours-demo"
                       className="block px-2 py-1 text-sm font-medium text-blue-600 hover:bg-blue-50 focus-ring rounded"
                       role="menuitem"
                       onClick={() => setIsMobileMenuOpen(false)}
