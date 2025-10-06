@@ -1,164 +1,150 @@
-# Teed Up Golf Tours - Combined Project
+# 🏌️ Teed Up Golf Tours
 
-This is the unified React/TypeScript application combining the homepage and tour detail functionality from both original projects.
+A luxury golf tour booking and management application built with modern web technologies.
 
-## Features
-
-### Homepage
-- Hero section with slideshow of tour destinations
-- Interactive tour carousel with navigation
-- Feature blocks highlighting company benefits
-- Newsletter subscription form
-- Responsive design with mobile optimization
-
-### Tour Pages
-- Detailed tour information with hero images
-- Day-by-day itinerary with interactive day selector
-- Pricing and booking information
-- FAQ section
-- Host information
-- Similar tours recommendations
-- Interactive modals for detailed information
-
-### Technical Features
-- React 18 with TypeScript
-- React Router for navigation
-- Zustand for state management
-- Framer Motion for animations
-- Tailwind CSS with custom design system
-- Error boundaries and loading states
-- Responsive design
-- SEO-friendly structure
-
-## Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js (version 18 or higher)
 - npm or yarn
 
 ### Installation
 
-1. Navigate to the project directory:
-```bash
-cd combined-project
-```
+1. Clone the repository
+   ```bash
+   git clone https://github.com/tomm789/teed-up-golf-tours-app.git
+   cd teed-up-golf-tours-app
+   ```
 
 2. Install dependencies:
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 3. Start the development server:
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
 4. Open your browser and navigate to `http://localhost:5173`
 
-### Build for Production
+## 📋 Available Scripts
 
-```bash
-npm run build
-```
+- `npm run dev` - Start the development server
+- `npm run build` - Build the project for production
+- `npm run preview` - Preview the production build
+- `npm run lint` - Run ESLint
 
-The built files will be in the `dist` directory.
-
-## Project Structure
+## 🏗️ Project Structure
 
 ```
 src/
-├── components/
-│   ├── ui/                    # Reusable UI components
-│   ├── layout/                # Header, Footer, Navigation
-│   ├── homepage/              # Homepage-specific components
-│   ├── tour/                  # Tour page-specific components
-│   └── shared/                # Shared components (Modal, ErrorBoundary, etc.)
-├── pages/
-│   ├── HomePage.tsx           # Main homepage
-│   ├── TourPage.tsx           # Individual tour page
-│   └── LuxuryPage.tsx         # Luxury variant
-├── data/
-│   ├── types/                 # TypeScript interfaces
-│   ├── tours.ts               # Tour data
-│   ├── days.ts                # Itinerary data
-│   ├── modals.ts              # Modal content
-│   └── similar.ts             # Similar tours
-├── hooks/
-│   └── useStore.ts            # State management
-├── lib/
-│   └── utils.ts               # Utility functions
-├── styles/
-│   └── globals.css            # Global styles with design system
-├── App.tsx                    # Main app component with routing
-└── main.tsx                   # Entry point
+├── components/          # Reusable UI components
+│   ├── archive/        # Tour listing and filtering
+│   ├── booking/        # Booking flow components
+│   ├── homepage/       # Landing page components
+│   ├── layout/         # Header, footer, navigation
+│   ├── shared/         # Common components
+│   ├── tour/           # Tour detail components
+│   └── ui/             # Base UI components
+├── data/               # Mock data and type definitions
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions and helpers
+├── pages/              # Main application pages
+├── services/           # API and external service integrations
+└── styles/             # Global styles and CSS
 ```
 
-## Design System
+## 🛠️ Technology Stack
 
-The project uses a unified design system with CSS custom properties:
+### Core Technologies
+- **React 18.3.1** - Modern React with hooks and concurrent features
+- **TypeScript 5.5.3** - Type-safe JavaScript development
+- **Vite 5.4.8** - Fast build tool and development server
+- **Tailwind CSS 3.4.13** - Utility-first CSS framework
 
-- `--tu-navy`: Primary navy color (#1f2230)
-- `--tu-ink`: Dark ink color (#232635)
-- `--tu-gold`: Accent gold color (#c9c39a)
-- `--tu-warmgray`: Light warm gray (#f4f4f2)
-- `--tu-white`: Pure white (#ffffff)
+### UI & UX
+- **Radix UI** - Accessible, unstyled UI components
+- **Framer Motion** - Animation and gesture library
+- **Lucide React** - Beautiful icon library
+- **Embla Carousel** - Lightweight carousel library
 
-## Routing
+### State Management & Forms
+- **Zustand** - Lightweight state management
+- **React Hook Form** - Performant forms with easy validation
+- **Zod** - TypeScript-first schema validation
 
-- `/` - Homepage
-- `/tour/:slug` - Individual tour pages
-- `/luxury` - Luxury tours page
+### Routing & Navigation
+- **React Router DOM** - Client-side routing
 
-## State Management
+## 🎯 Key Features
 
-The application uses Zustand for state management with two main stores:
+### 🏌️ Tour Management
+- Detailed tour information with image galleries
+- Day-by-day itinerary breakdown
+- Course information and highlights
+- Host profiles and testimonials
+- Similar tour recommendations
 
-- `useAppStore`: Global app state (selected day, active modal, loading states)
-- `useTourStore`: Tour-specific state (tours list, current tour, etc.)
+### 📅 Booking System
+- Multi-step booking flow
+- Guest selection and room preferences
+- Add-ons and extras selection
+- Traveller information forms
+- Payment processing integration
+- Booking summary and confirmation
 
-## WordPress Integration
+### 🔍 Search & Filtering
+- Advanced tour filtering by destination, price, duration
+- Search functionality with real-time results
+- Mobile-optimized filter interface
+- Sort options (price, duration, rating)
+- Selected filters management
 
-The project is designed to integrate with WordPress as a headless CMS. The data structure is prepared for:
+### 🔗 WordPress Integration
+- Headless WordPress setup
+- GraphQL and REST API integration
+- WooCommerce product synchronization
+- Content management capabilities
 
-- Custom post types for tours
-- Custom fields for pricing, itinerary, etc.
-- REST API integration
-- Media management through WordPress
+## 📱 Responsive Design
 
-## Development
+The application is built with a mobile-first approach, ensuring optimal user experience across all devices:
+- Mobile phones (320px+)
+- Tablets (768px+)
+- Desktop (1024px+)
+- Large screens (1440px+)
 
-### Available Scripts
+## 🚀 Performance
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
+- Code splitting with dynamic imports
+- Image optimization and lazy loading
+- Bundle size optimization with Vite
+- Efficient state management patterns
+- Hot module replacement for fast development
 
-### Code Style
+## 🔧 Development
 
-The project uses:
-- TypeScript for type safety
-- ESLint for code quality
-- Prettier for code formatting
-- Tailwind CSS for styling
+### Code Quality
+- ESLint with React and TypeScript rules
+- Strict TypeScript configuration
+- Consistent code formatting
+- Component-based architecture
 
-## Deployment
+### Testing
+- Error boundaries for graceful error handling
+- Loading states and user feedback
+- Form validation and error messages
 
-The built application can be deployed to any static hosting service such as:
-- Vercel
-- Netlify
-- AWS S3 + CloudFront
-- GitHub Pages
+## 📄 License
 
-## Contributing
+This project is proprietary software for Teed Up Golf Tours.
 
-1. Follow the existing code style
-2. Add TypeScript types for new components
-3. Update tests if applicable
-4. Ensure responsive design
-5. Test on multiple browsers
+## 🤝 Contributing
 
-## License
+Please contact the development team for contribution guidelines.
 
-This project is proprietary to Teed Up Golf Tours.
+---
 
+Built with ❤️ for luxury golf experiences
