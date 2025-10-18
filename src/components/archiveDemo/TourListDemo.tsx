@@ -12,12 +12,12 @@ const TourCard: React.FC<{ tour: any; layout: 'grid' | 'list' }>=({ tour, layout
           <div className="text-xs text-gray-500 mb-1">{tour.duration}</div>
           <h3 className="display-font text-lg mb-1" style={{ color: 'var(--tu-navy)' }}>{tour.title}</h3>
           <p className="text-sm text-gray-600 mb-3">{tour.route}</p>
-          <div className="flex flex-wrap gap-2 mb-4">
+          <div className="flex flex-wrap gap-2 mb-6">
             {tour.highlights?.slice(0, 3)?.map((h: string, i: number)=>(
               <span key={i} className="px-2 py-1 text-xs rounded-full" style={{ backgroundColor: 'var(--tu-gold)', color: 'var(--tu-navy)' }}>{h}</span>
             ))}
           </div>
-          <Link to={`/tour/${tour.slug}`} className="btn-primary text-sm">View Tour →</Link>
+          <Link to={`/tour/${tour.slug}`} className="btn-primary text-sm mt-2 mb-2">View Tour →</Link>
         </div>
       </div>
     );
@@ -31,12 +31,12 @@ const TourCard: React.FC<{ tour: any; layout: 'grid' | 'list' }>=({ tour, layout
         <div className="text-xs text-gray-500 mb-1">{tour.duration}</div>
         <h3 className="display-font text-lg mb-1" style={{ color: 'var(--tu-navy)' }}>{tour.title}</h3>
         <p className="text-sm text-gray-600 mb-3">{tour.route}</p>
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="flex flex-wrap gap-2 mb-6">
           {tour.highlights?.slice(0, 3)?.map((h: string, i: number)=>(
             <span key={i} className="px-2 py-1 text-xs rounded-full" style={{ backgroundColor: 'var(--tu-gold)', color: 'var(--tu-navy)' }}>{h}</span>
           ))}
         </div>
-        <Link to={`/tour/${tour.slug}`} className="btn-primary text-sm">View Tour →</Link>
+        <Link to={`/tour/${tour.slug}`} className="btn-primary text-sm mt-2 mb-2">View Tour →</Link>
       </div>
     </div>
   );

@@ -31,13 +31,19 @@ export class ErrorBoundary extends Component<Props, State> {
               Something went wrong
             </h1>
             <p className="mb-6" style={{ color: 'var(--tu-ink)' }}>
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+              We're sorry, but something unexpected happened. You can go back to the previous page.
             </p>
             <button
-              onClick={() => window.location.reload()}
+              onClick={() => {
+                if (window.history.length > 1) {
+                  window.history.back();
+                } else {
+                  window.location.assign('/');
+                }
+              }}
               className="btn-primary"
             >
-              Refresh Page
+              Go Back
             </button>
           </div>
         </div>
