@@ -17,6 +17,9 @@ const ToursArchiveDemoPage: React.FC = () => {
       <Header />
       <main className="pt-16">
         <div className="container py-8">
+          <h1 className="display-font text-4xl md:text-5xl font-bold mb-8" style={{ color: 'var(--tu-navy)' }}>
+            All Golf Tours
+          </h1>
           {/* Desktop layout */}
           <div className="hidden md:flex items-center justify-between gap-4 mb-4">
             <SearchBar value={filters.search} onChange={filters.setSearch} />

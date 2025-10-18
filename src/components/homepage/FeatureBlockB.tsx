@@ -5,7 +5,7 @@ const FeatureBlockB: React.FC = () => {
   return (
     <section 
       className="section-spacing"
-      style={{ backgroundColor: 'var(--tu-warmgray)' }}
+      style={{ backgroundColor: 'var(--tu-navy)' }}
       aria-labelledby="feature-b-title"
     >
       <div className="container">
@@ -15,21 +15,27 @@ const FeatureBlockB: React.FC = () => {
             <div>
               <h2 
                 id="feature-b-title"
-                className="display-font text-3xl lg:text-4xl xl:text-5xl leading-tight mb-6"
-                style={{ color: 'var(--tu-navy)' }}
+                className="display-font text-3xl lg:text-4xl xl:text-5xl leading-tight mb-6 text-white"
               >
                 LUXURY SPORTING TOURS
               </h2>
             </div>
             
-            <p className="text-lg lg:text-xl leading-relaxed" style={{ color: 'var(--tu-ink)' }}>
+            <p className="text-lg lg:text-xl leading-relaxed text-white/90">
               From the US Masters to the Super Bowl, Wimbledon, the Melbourne Cup and more, 
               our fully-escorted sporting trips blend world-class events with golf in 
               effortless comfort.
             </p>
             
             <div className="pt-4">
-              <Link to="/tours-demo" className="btn-outline">
+              <Link 
+                to="/tours-demo" 
+                className="px-8 py-3 rounded-lg font-semibold text-sm uppercase tracking-wide transition-all hover:transform hover:scale-105 focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 inline-block"
+                style={{ 
+                  backgroundColor: 'var(--tu-gold)', 
+                  color: 'var(--tu-navy)' 
+                }}
+              >
                 VIEW COLLECTION →
               </Link>
             </div>

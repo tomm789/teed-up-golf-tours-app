@@ -23,20 +23,20 @@ const Subscribe: React.FC = () => {
 
   return (
     <section 
-      className="section-spacing"
-      style={{ backgroundColor: 'var(--tu-navy)' }}
+      className="section-spacing bg-white"
       aria-labelledby="subscribe-title"
     >
       <div className="container">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
             id="subscribe-title"
-            className="display-font text-3xl lg:text-4xl mb-6 text-white"
+            className="display-font text-3xl lg:text-4xl mb-6"
+            style={{ color: 'var(--tu-navy)' }}
           >
             SUBSCRIBE
           </h2>
           
-          <p className="text-lg lg:text-xl text-white/90 mb-8">
+          <p className="text-lg lg:text-xl mb-8" style={{ color: 'var(--tu-ink)' }}>
             Get Teed Up news, new journeys and inspiration.
           </p>
           
@@ -49,7 +49,7 @@ const Subscribe: React.FC = () => {
                   name="title"
                   value={formData.title}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-400 focus:border-transparent bg-white text-gray-900"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-500 focus:ring-2 focus:ring-yellow-400 focus:border-transparent bg-white text-gray-900"
                   required
                 >
                   <option value="">Title</option>
@@ -69,7 +69,7 @@ const Subscribe: React.FC = () => {
                   placeholder="First Name"
                   value={formData.firstName}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-400 focus:border-transparent bg-white text-gray-900"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-500 focus:ring-2 focus:ring-yellow-400 focus:border-transparent bg-white text-gray-900"
                   required
                 />
               </div>
@@ -83,7 +83,7 @@ const Subscribe: React.FC = () => {
                   placeholder="Last Name"
                   value={formData.lastName}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-400 focus:border-transparent bg-white text-gray-900"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-500 focus:ring-2 focus:ring-yellow-400 focus:border-transparent bg-white text-gray-900"
                   required
                 />
               </div>
@@ -97,7 +97,7 @@ const Subscribe: React.FC = () => {
                   placeholder="Email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-400 focus:border-transparent bg-white text-gray-900"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-500 focus:ring-2 focus:ring-yellow-400 focus:border-transparent bg-white text-gray-900"
                   required
                 />
               </div>
@@ -106,17 +106,13 @@ const Subscribe: React.FC = () => {
             <div className="mb-6">
               <button 
                 type="submit"
-                className="px-8 py-3 rounded-lg font-semibold text-sm uppercase tracking-wide transition-all hover:transform hover:scale-105 focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
-                style={{ 
-                  backgroundColor: 'var(--tu-gold)', 
-                  color: 'var(--tu-navy)' 
-                }}
+                className="btn-primary"
               >
                 SUBMIT
               </button>
             </div>
             
-            <p className="text-sm text-white/70">
+            <p className="text-sm text-gray-600">
               By subscribing, you agree to our Privacy Policy and consent to receive updates from Teed Up Golf Tours.
             </p>
           </form>
